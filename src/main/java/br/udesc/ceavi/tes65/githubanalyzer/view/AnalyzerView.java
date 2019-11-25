@@ -70,7 +70,7 @@ public class AnalyzerView extends JFrame {
         tfFollowers.setText(String.valueOf(user.getFollowers()));
         tfRepositories.setText(String.valueOf(user.getRepositories()));
         taBiography.setText(user.getBiography());
-        lbResult.setText(result);
+        lbResult.setText(String.format("Result: %s", result));
         updatePhoto(user.getPhoto());
     }
 
