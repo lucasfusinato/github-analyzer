@@ -23,7 +23,7 @@ public class UserService {
             ApiGithubResult result = api.get(username);
             
             //If login is different it means that user does not exists
-            if(result.login != username) {
+            if(!username.equals(result.login)) {
                 throw new Exception("User doesn't exists.");
             }
             

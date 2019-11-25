@@ -56,7 +56,7 @@ public class PointCalculatorTest {
     }
 
     @Test
-    public void testIfSums5PointsWhenUserHasNotCompany() {
+    public void testIfSums5PointsWhenUserHasCompany() {
         int pointsWithoutCompany, pointsWithCompany;
         
         pointsWithoutCompany = calculator.calculate(userMock);
@@ -64,7 +64,7 @@ public class PointCalculatorTest {
         when(userMock.getCompany()).thenReturn("Company");
         pointsWithCompany = calculator.calculate(userMock);
         
-        assertEquals(5, pointsWithoutCompany - pointsWithCompany);
+        assertEquals(5, pointsWithCompany - pointsWithoutCompany);
     }
 
     @Test

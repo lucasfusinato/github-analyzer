@@ -15,7 +15,7 @@ public class PointCalculator {
         if(!Optional.ofNullable(user.getLocation()).isEmpty()) {
             points += 10;
         }
-        if(Optional.ofNullable(user.getCompany()).isEmpty()) {
+        if(!Optional.ofNullable(user.getCompany()).isEmpty()) {
             points += 5;
         }
         if(!Optional.ofNullable(user.getBiography()).isEmpty()) {
