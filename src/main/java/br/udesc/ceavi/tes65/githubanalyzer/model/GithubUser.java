@@ -11,6 +11,10 @@ public class GithubUser {
     private int repositories;
     private String biography;
 
+    public GithubUser(String username) {
+        this.username = username;
+    }
+
     public String getUsername() {
         return username;
     }
